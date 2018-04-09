@@ -4,7 +4,7 @@ MAINTAINER liuzheng <liuzheng712@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install unzip && apt-get clean all && \
+RUN apt-get update && apt-get install unzip -y && apt-get clean all && \
 curl -o /icecoder.zip 'https://icecoder.net/download-zip?version=6.0' && \
 unzip -q /icecoder.zip -d /tmp/ && \
 cp -r /tmp/ICE* /var/www/html/icecoder && \
